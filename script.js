@@ -22,13 +22,13 @@ fetch('data.json')
     Object.entries(grouped).forEach(([key, entries]) => {
       const [lat, lng] = key.split(',').map(Number);
       const popupContent = entries.map(p =>
-        `<strong>${p["Project Name"]}</strong><br>
-        <em>${p["Country of operations"]}</em><br>
-        <strong>Type:</strong> ${p.Type}<br>
-        <strong>Stage:</strong> ${p["Stage of Food Value Chain"]}<br>
-        <strong>Platform:</strong> ${p.Platform}<br>
-        <strong>Description:</strong> ${p.Description}<br>
-        <a href="${p.Website}" target="_blank">${p.Website}</a><br><hr>`
+        `<strong>${p.name}</strong><br>
+         <em>${p.country}</em><br>
+         <strong>Type:</strong> ${p.type}<br>
+         <strong>Stage:</strong> ${p.stage}<br>
+         <strong>Platform:</strong> ${p.platform}<br>
+         <strong>Description:</strong> ${p.description}<br>
+         ${p.website ? `<a href="${p.website}" target="_blank">${p.website}</a>` : ""}<br><hr>`
       ).join('');
 
       L.marker([lat, lng]).addTo(map).bindPopup(popupContent);
