@@ -10,8 +10,27 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 fetch('data.json')
   .then(res => res.json())
   .then(projects => {
+    const grouped = {};
+
+    // Group by lat+lng key
     projects.forEach(p => {
-      const marker = L.marker([p.lat, p.lng]).addTo(map);
-      marker.bindPopup(`<strong>${p.name}</strong><br><em>${p.country}</em><br>${p.description}`);
+      const key = `${p.lat},${p.lng}`;
+      if (!grouped[key]) grouped[key] = [];
+      grouped[key].push(p);
+    });
+
+    Object.entries(grouped).forEach(([key, entries]) => {
+      const [lat, lng] = key.split(',').map(Number);
+      const popupContent = entries.map(p =>
+        `<strong>${p["Project Name"]}</strong><br>
+        <em>${p["Country of operations"]}</em><br>
+        <strong>Type:</strong> ${p.Type}<br>
+        <strong>Stage:</strong> ${p["Stage of Food Value Chain"]}<br>
+        <strong>Platform:</strong> ${p.Platform}<br>
+        <strong>Description:</strong> ${p.Description}<br>
+        <a href="${p.Website}" target="_blank">${p.Website}</a><br><hr>`
+      ).join('');
+
+      L.marker([lat, lng]).addTo(map).bindPopup(popupContent);
     });
   });
