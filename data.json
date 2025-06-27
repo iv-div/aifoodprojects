@@ -1,0 +1,68 @@
+[
+  {
+    "name": "PlantVillage Nuru",
+    "country": "India",
+    "type": "computer vision",
+    "stage": "Farming",
+    "platform": "mobile",
+    "description": "Crop disease diagnostics using computer vision",
+    "website": "",
+    "lat": 20.593684,
+    "lng": 78.96288
+  },
+  {
+    "name": "PlantVillage Nuru",
+    "country": "Kenya",
+    "type": "computer vision",
+    "stage": "Farming",
+    "platform": "mobile",
+    "description": "Crop disease diagnostics using computer vision",
+    "website": "",
+    "lat": -0.023559,
+    "lng": 37.906193
+  },
+  {
+    "name": "PlantVillage Nuru",
+    "country": "Tanzania",
+    "type": "computer vision",
+    "stage": "Farming",
+    "platform": "mobile",
+    "description": "Crop disease diagnostics using computer vision",
+    "website": "",
+    "lat": -6.369028,
+    "lng": 34.888822
+  },
+  {
+    "name": "Saagu Baagu",
+    "country": "India",
+    "type": "chatbot",
+    "stage": "Farming",
+    "platform": "mobile; WhatsApp",
+    "description": "This Telugu-language chatbot provided farmers with timely suggestions tailored to the maturity stages of their crops",
+    "website": "https://www.forbes.com/sites/janakirammsv/2024/02/01/how-indian-farmers-are-using-ai-to-increase-crop-yield/",
+    "lat": 20.593684,
+    "lng": 78.96288
+  },
+  {
+    "name": "KrishiTantra",
+    "country": "India",
+    "type": "machine learning",
+    "stage": "Farming",
+    "platform": "proprietary",
+    "description": "KrishiTantra, an agritech startup, established local soil testing centers equipped with machine learning technology. This innovation expedited the soil testing process, offering farmers rapid insights into soil health and fertilizer recommendations.",
+    "website": "https://www.forbes.com/sites/janakirammsv/2024/02/01/how-indian-farmers-are-using-ai-to-increase-crop-yield/",
+    "lat": 20.593684,
+    "lng": 78.96288
+  },
+  {
+    "name": "AgNext",
+    "country": "India",
+    "type": "computer vision",
+    "stage": "Farming",
+    "platform": "mobile",
+    "description": "Another AI startup, AgNext, introduced a computer vision system to assess the quality of chilis directly in the field, enabling farmers to identify defects and determine quality attributes like color, shape, and size, thus enhancing crop value and reducing waste.",
+    "website": "https://www.forbes.com/sites/janakirammsv/2024/02/01/how-indian-farmers-are-using-ai-to-increase-crop-yield/",
+    "lat": 20.593684,
+    "lng": 78.96288
+  }
+]
